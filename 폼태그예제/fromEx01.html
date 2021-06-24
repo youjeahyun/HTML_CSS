@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 연습하기</title>
+    <style>
+    ul{
+    list-style: none;
+    }
+
+
+    </style>
+
+</head>
+<body>
+         <!-- 라디오 버튼과 체크박스 만들기-->
+        <form action="post" name = "a1.jsp">
+            <h3>수강분야(다수선택 가능)</h3>
+            <ul>
+                
+                <li><input type="checkbox" name="S1" value="grm">문법</li>
+                <li><input type="checkbox" name="S2" value="wr">작문</li>
+                <li><input type="checkbox" name="S3" value="rd">독해</li>
+            </ul>
+
+            <h3>수강분야(1개만 선택 가능)</h3>
+            <ul>
+                
+                <li><input type="radio" name="subject" value="eng">영어회화</li>
+                <li><input type="radio" name="subject" value="ch">중국어회화</li>
+                <li><input type="radio" name="subject" value="jp">일어회화</li>
+
+                
+
+            </ul>
+      
+        
+        <fieldset>
+            <legend> 등록정보 </legend>
+            <ul>
+               <li>
+                   <label for="reg"> 참여인원<small>(최대인원:10명) </small> </label>
+                   <input type="number" id="reg" value="1" min="0" max="10" step="1">
+               </li>
+               <li>
+                    <label for="reg1"> 지원물품 <small> (1인당 5개) </small> </label>
+                    <input type="number" id="reg1"value="1" min="0" max="5" step="1">
+               </li>
+               <li>
+                     <label for="reg2"> 희망단계 <small> (상, 중, 하) </small> </label>
+                    <input type="range" id="reg2" value="1" min="1" max="3" step="1">
+               </li>
+    
+            </ul>
+        </fieldset>
+    
+ 
+        <fieldset>
+            <legend> 메일링 </legend>
+            <ul>
+                메일로 받고 싶은 뉴스 주제를 선택해 주세요 <br><br>
+               <label><input type="radio" name="subject" value="grm">문법</label>
+               <label><input type="radio" name="subject" value="wr">작문</label>
+               <label><input type="radio" name="subject" value="rd">독해</label>
+        </fieldset>
+    
+        <fieldset>
+            <legend> 신청과목 </legend>
+            <ul>
+                이달에신청할 과목을 선택하세요 (1과목만가능) <br><br>
+                <label><input type="checkbox" name="subject" value="ma">해외 단신</label>
+                <label><input type="checkbox" name="subject" value="five">5분 회화</label>
+                <label><input type="checkbox" name="subject" value="pops">모닝팝스</label>
+        </fieldset>
+          
+        <fieldset> 
+            
+            <legend>과 티셔츠 설문</legend>
+            <p>올해 과 티를 만드려고 합니다. 원하는 색상을 추천해 주세요</p>
+            <label>선호색상<input type="color" name="colorValue" value="#00ff00"></label>
+               
+        </fieldset>
+
+        <fieldset>
+            <legend>조회기간 선택</legend>            
+            <label><input type="time" id="start" min="00:00" max="24:59" step="00:05" value="13:00"></label>
+            <label><input type="date" id="end"></label>
+        
+        </fieldset>  
+        <fieldset>
+            <legend>조회기간 선택</legend>            
+            
+            <label for="mailing1">메일주소</label> <input id="mailing1" type="email" name="emailName">
+                   
+        </fieldset>  
+                    
+        <fieldset>
+            <legend>이미지 버튼 넣기</legend>
+            <label> 아이디 <input type="text" name="idName" id="id"></label>
+            <label> 비밀번호 <input type="password" name="passwordName" id="pw"></label>
+            <input type="image" src="image/login.jpg" alt="로그이미지"> <!--전송버튼 submit 대신에 이미지를 넣어 전송할수있다-->
+            <input type="button" value="새탭열기" onclick="window.open()">
+            <label>첨부파일 <input type="file" name="fileData"> </label>
+           
+        </fieldset> 
+
+        <fieldset>
+            <legend>태그의 다양한 속성 배우기</legend>
+            <label calss="reg" for = "name">이름</label>
+            <input calss="text" id="name" autofocus required placeholder="이름은 한글, 영어만 띄어쓰지 않기">
+            <label>비밀번호 <input type="text" value="이젠컴퓨터학원" readonly></label>
+        </fieldset>
+
+         <fieldset>
+            <legend> 교재 수령</legend>
+            <label><input tpye="number" name="bookCount" Value="10" min="10" max="100" step="5"></label>
+            <label>아이디 <input type="text" size="10" minlength="4" maxlength="15"></label>
+                <small style="color:red"> 4~15자리 이내의 영문과 숫자</style></small>
+         </fieldset>
+
+
+       <input type="submit" value="전송">
+       <input type="reset"  value="취소(다시입력)">
+    </form>
+</body>
+</html>
